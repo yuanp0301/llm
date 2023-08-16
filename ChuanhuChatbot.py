@@ -165,7 +165,8 @@ with gr.Blocks(css=customCSS, theme=small_and_beautiful_theme) as demo:
                                         placeholder=i18n("设置文件名: 默认为.json，可选为.md"),
                                         label=i18n("设置保存文件名"),
                                         value=i18n("对话历史记录"),
-                                        container=False,
+                                        elem_classes="no-container"
+                                        # container=False,
                                     )
                                 with gr.Column(scale=1):
                                     saveHistoryBtn = gr.Button(i18n("💾 保存对话"))
@@ -269,7 +270,8 @@ with gr.Blocks(css=customCSS, theme=small_and_beautiful_theme) as demo:
                             label="API-Host",
                             value=config.api_host or shared.API_HOST,
                             lines=1,
-                            container=False,
+                            elem_classes="no-container"
+                            # container=False,
                         )
                         changeAPIURLBtn = gr.Button(i18n("🔄 切换API地址"))
                         proxyTxt = gr.Textbox(
@@ -278,7 +280,8 @@ with gr.Blocks(css=customCSS, theme=small_and_beautiful_theme) as demo:
                             label=i18n("代理地址（示例：http://127.0.0.1:10809）"),
                             value="",
                             lines=2,
-                            container=False,
+                            elem_classes="no-container"
+                            # container=False,
                         )
                         changeProxyBtn = gr.Button(i18n("🔄 设置代理地址"))
                         default_btn = gr.Button(i18n("🔙 恢复默认设置"))
